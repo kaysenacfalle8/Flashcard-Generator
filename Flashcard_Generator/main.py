@@ -8,12 +8,12 @@ client = OpenAI(
 
 
 
-def response(model: str, messages: list, string):
+def response(model: str, messages: list, topic):
     response = client.chat.completions.create(
     model="gpt-4o",
     messages=[
         {"role": "system", "content": "You are a helpful assistant that creates flashcards."},
-        {"role": "user", "content": "Create flashcards about " + string}
+        {"role": "user", "content": "Create flashcards about " + topic}
     ]
 )
 
@@ -22,6 +22,10 @@ def create_own_flashcards():
     for int in range(number_of_cards): 
         term = st.write(input("Give me a term or question: "))
         answer = st.write(input("Give me the answer or explanation: "))
+
+def create_ai_flashcards():
+    
+
 
 
 
@@ -39,7 +43,7 @@ def main():
     
     
 
-
+        
 
 
 
