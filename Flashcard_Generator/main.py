@@ -19,7 +19,7 @@ def response(model: str, messages: list, string):
 
 def create_own_flashcards(): 
     number_of_cards = st.slider("How many flashcards do you want to create?", 1, 25, 1)
-    for int in range(number_of_cards):
+    for int in range(number_of_cards): 
         term = st.write(input("Give me a term or question: "))
         answer = st.write(input("Give me the answer or explanation: "))
 
@@ -31,10 +31,12 @@ def main():
     st.write("Choose a mode below")
     st.button("Create your own")
     st.button("Make flashcards with AI")
+    question = "questions.txt"
+
     if st.button == "Create your own":
         create_own_flashcards()
     if st.button == "Make flashcards with AI":
-
+    
     
 
 
